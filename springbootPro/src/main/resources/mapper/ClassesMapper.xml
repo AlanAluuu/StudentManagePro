@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gpl.mapper.ClassesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gpl.domain.Classes">
+        <id column="Cno" property="cno" />
+        <result column="Cnum" property="cnum" />
+        <result column="Cdate" property="cdate" />
+        <result column="CMN" property="cmn" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Cno, Cnum, Cdate, CMN
+    </sql>
+    <select id="pageCC" resultType="com.gpl.domain.Classes">
+        select * from classes ${ew.customSqlSegment}
+    </select>
+
+</mapper>

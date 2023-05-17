@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gpl.mapper.PartyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gpl.domain.Party">
+        <id column="Pno" property="pno" />
+        <result column="Pname" property="pname" />
+        <result column="Pdate" property="pdate" />
+        <result column="Plc" property="plc" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        Pno, Pname, Pdate, Plc
+    </sql>
+    <select id="pageCC" resultType="com.gpl.domain.Party">
+        select * from party ${ew.customSqlSegment}
+    </select>
+</mapper>
