@@ -1,6 +1,9 @@
 # StudentManagePro
 这是一个数据库的大作业，整个项目为 Springboot+VueElement,正好最近需要复习一下前后端的知识，所以上传到这里，记录自己曾经做过的项目，顺便复习一下
 
+[TOC]
+
+
 
 #### 一、总体设计
 
@@ -208,7 +211,7 @@ DeptMapper中IPage pageCC(IPage<Dept> page, @Param(Constants.WRAPPER) Wrapper wr
 </mapper>
 ```
 
-##### 3. 服务层开发(service)
+##### 3、服务层开发(service)
 
 下面是service层的开发，使用标准通用接口IService加速开发
 
@@ -264,7 +267,7 @@ public class DeptServiceImpl extends ServiceImpl<DeptMapper, Dept> implements De
 }
 ```
 
-##### 4. 控制层开发(Controller)
+##### 4、控制层开发(Controller)
 
 下面是Controller层的开发，使用@RestController标注控制层组件，使用@RequestMapping("/dept")标记访问路径。
 
@@ -586,7 +589,7 @@ public class CodeGenerator {
 
 
 
-#### 三、Vue+Element前端页面设计
+#### 四、Vue+Element前端页面设计
 
 ##### 1、Element-ui
 
